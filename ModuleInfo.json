@@ -1,0 +1,20 @@
+{
+  "Name": "QuestionBoxGalleryObj",
+  "Author": "GlacialVitality",
+  "Description": "The final planet of Gusty Garden Galaxy ported to SMG2",
+  "InstallDependencies": ["Syati_ObjectFactories", "Syati_Init"],
+  "SupportedGames": [
+    "SB4E"
+  ],
+  "ModuleData" : [
+    {
+      "ProductMapObj": [
+        {
+          "Name" : "QuestionBoxGalleryObj",
+          "Function" : "createExtActor<QuestionBoxGalleryObj>",
+          "Include" : "QuestionBoxGalleryObj.h"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "Version": 1,
+  "Files": [
+    "include/QuestionBoxGalleryObj.h",
+    "source/QuestionBoxGalleryObj.cpp"
+  ]
+}
