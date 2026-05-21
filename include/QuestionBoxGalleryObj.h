@@ -32,9 +32,3 @@ public:
 namespace MapObjActorUtil {
     bool isRailMoverReachedEnd(const MapObjActor *);
 };
-
-/*
-| `tryStageEffectStart__Q22MR11StageEffectFP9LiveActorPCc` | `0x8023CD30` | :x: (0.0%) |
-| `tryStageEffectMoving__Q22MR11StageEffectFP9LiveActorPCc` | `0x8023CE74` | :x: (0.0%) |
-| `tryStageEffectStop__Q22MR11StageEffectFP9LiveActorPCc` | `0x8023CF40` | :x: (0.0%) |
-*/

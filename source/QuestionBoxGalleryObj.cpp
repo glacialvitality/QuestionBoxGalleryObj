@@ -1,14 +1,20 @@
 #include "QuestionBoxGalleryObj.h"
 
+/*
+tryStageEffectStart__Q22MR11StageEffectFP9LiveActorPCc=0x80310960
+tryStageEffectMoving__Q22MR11StageEffectFP9LiveActorPCc=0x803109D0
+tryStageEffectStop__Q22MR11StageEffectFP9LiveActorPCc=0x80310B70
+*/
+
 extern "C" {
-    //tryStageEffectStart__Q22MR11StageEffectFP9LiveActorPCc=0x8023CD30
-    StageEffect* __kAutoMap_8023CD30(LiveActor*, const char*);
+    StageEffect* __kAutoMap_80310960(LiveActor*, const char*); //tryStageEffectStart__Q22MR11StageEffectFP9LiveActorPCc=0x80310960
 
-    //tryStageEffectMoving__Q22MR11StageEffectFP9LiveActorPCc=0x8023CE74
-    LiveActor* __kAutoMap_8023CE74(LiveActor*, const char*);
+    
+    StageEffect* __kAutoMap_803109D0(LiveActor*, const char*); //tryStageEffectMoving__Q22MR11StageEffectFP9LiveActorPCc=0x803109D0
 
-    //tryStageEffectStop__Q22MR11StageEffectFP9LiveActorPCc=0x8023CF40
-    LiveActor* __kAutoMap_8023CF40(LiveActor*, const char*);
+    
+    StageEffect* __kAutoMap_80310B70(LiveActor*, const char*); //tryStageEffectStop__Q22MR11StageEffectFP9LiveActorPCc=0x80310B70
+
 };
 
 namespace NrvQuestionBoxGalleryObj {
@@ -114,22 +120,26 @@ void QuestionBoxGalleryObj::initCaseUseSwitchB(const MapObjActorInitInfo& pInitI
 void QuestionBoxGalleryObj::control() {
     MapObjActor::control();
 
-    if (mRotator && MapObjActorUtil::isRotatorMoving(this)) {
-        //MR::StageEffect::tryStageEffectMoving(this, mObjName);
-        __kAutoMap_8023CE74(this,  mObjName);
+    if (mRotator && mRotator->isMoving()) {
+        __kAutoMap_803109D0(this,  mObjName); //MR::StageEffect::tryStageEffectMoving(this, mObjName);
         
     }
 
     if (mRailMover) {
-        if (MapObjActorUtil::isRailMoverWorking(this)) {
-            //MR::StageEffect::tryStageEffectMoving(this, mObjName);
-            __kAutoMap_8023CE74(this, mObjName);
+
+        if (MR::isFirstStep(this)) {
+            MapObjActorUtil::startRailMover(this);
+            if (mRailMover->isWorking()) {
+                MR::startLevelSound(this, "SE_OJ_LV_ABEKOBE_LIFT_MV", -1, -1, -1);
+                __kAutoMap_803109D0(this, mObjName); //MR::StageEffect::tryStageEffectMoving(this, mObjName);
+            }
+
+            if (mRailMover->isReachedEnd()) { //MapObjActorUtil::isRailMoverReachedEnd(this)
+                MR::startLevelSound(this, "SE_OJ_LV_ABEKOBE_LIFT_ED", -1, -1, -1);
+                __kAutoMap_80310B70(this, mObjName); //MR::StageEffect::tryStageEffectStop(this, mObjName);
+            }
         }
 
-        if (MapObjActorUtil::isRailMoverReachedEnd(this)) {
-            //MR::StageEffect::tryStageEffectStop(this, mObjName);
-            __kAutoMap_8023CF40(this, mObjName);
-        }
     }
 }
 
