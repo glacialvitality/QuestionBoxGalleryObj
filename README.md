@@ -2,13 +2,14 @@ This works with Super Mario Galaxy 2 (SB4E01). Not sure about other regions. Nin
 
 ### Setup
 You MUST add the following entries to your `ProductMapObjDataTable.bcsv`:
-*QuestionBoxPlanetA*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxPlanetB*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxPlanetC*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxPlanetD*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxMoveStepA*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxMoveStepB*, *QuestionBoxGalleryObj* (ModelName, ClassName)
-*QuestionBoxMoveStepC*, *QuestionBoxGalleryObj* (ModelName, ClassName)
+
+*QuestionBoxPlanetA*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxPlanetB*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxPlanetC*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxPlanetD*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxMoveStepA*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxMoveStepB*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
+*QuestionBoxMoveStepC*, *QuestionBoxGalleryObj* (ModelName, ClassName)<br>
 
 ### Object-Specific Arguments (MapPart: QuestionBoxMoveStepA)
 *Note that the current list of arguments may be subject to any corrections, if needed*
