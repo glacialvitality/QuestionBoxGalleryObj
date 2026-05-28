@@ -1,0 +1,235 @@
+{
+    "Objects": [
+        {
+            "Progress": 1,
+            "Parameters": {
+                "SW_B": {
+                    "Description": "When activated, the object will switch to it's \"Off\" state",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Needed": false
+                },
+                "SW_A": {
+                    "Description": "When activated, the object will switch to it's \"On\" state",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Needed": false
+                },
+                "Point_arg7": {
+                    "Type": "Integer",
+                    "Description": "Decides whether Point_arg0 specifies the movement speed or the time it takes to reach the next point.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Values": [
+                        {
+                            "Value": "-1",
+                            "Notes": "Point_arg0 specifies movement speed"
+                        },
+                        {
+                            "Value": "1",
+                            "Notes": "Point_arg0 specifies time until next point"
+                        }
+                    ],
+                    "Needed": false,
+                    "Name": "Speed Type"
+                },
+                "RotateSpeed": {
+                    "Description": "The speed at which this object rotates. Curiously, the game sets the default value of this to 0x7F7FFFFF and not Zero.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Name": "Rotate Speed"
+                },
+                "Rail": {
+                    "Description": "The path that it can move on.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Needed": false
+                },
+                "ClippingGroup": {
+                    "Description": "Objects in this group are always clipped together.",
+                    "Exclusives": [],
+                    "Games": 1
+                },
+                "Point_arg1": {
+                    "Type": "Integer",
+                    "Description": "The time in frames it takes for the object to reach the movement speed set at this point.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Values": [],
+                    "Needed": false,
+                    "Name": "Acceleration Time"
+                },
+                "Point_arg0": {
+                    "Type": "Integer",
+                    "Description": "The movement speed the object has starting from this point. If Point_arg7 is set to 1, this specifies the time in frames it takes to reach the next point.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Values": [],
+                    "Needed": false,
+                    "Name": "Movement Speed / Time"
+                },
+                "Obj_arg0": {
+                    "Type": "Boolean",
+                    "Description": "Determines the starting state of the object",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Values": [
+                        {
+                            "Value": "-1",
+                            "Notes": "Off (Default)"
+                        },
+                        {
+                            "Value": "0",
+                            "Notes": "On"
+                        }
+                    ],
+                    "Needed": false,
+                    "Name": "Starting State"
+                },
+                "Point_arg5": {
+                    "Type": "Integer",
+                    "Description": "The time in frames the object waits at this point before it continues moving again.",
+                    "Exclusives": [],
+                    "Games": 1,
+                    "Values": [],
+                    "Needed": false,
+                    "Name": "Stop Time"
+                }
+            },
+            "Games": 3,
+            "InternalName": "QuestionBoxGalleryObj",
+            "Notes": "An object that can have an On and Off state based on Switches. Objects with \"Planet\" in the name have a different \"Hio\". Objects with \"PlanetA\" in the name have an infinite far clip distance",
+            "Name": "QuestionBoxGalleryObj"
+        }
+    ],
+    "Classes": [
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxMoveStepA",
+            "ListSMG1": "MapPartsInfo",
+            "ListSMG2": "MapPartsInfo",
+            "Name": "Gusty Garden -- Large Gravity Scramble Block",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "A large rotating block used in the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxMoveStepB",
+            "ListSMG1": "MapPartsInfo",
+            "ListSMG2": "MapPartsInfo",
+            "Name": "Gusty Garden -- Small Rotated Gravity Scramble Block",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "A small moving block used in the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxMoveStepC",
+            "ListSMG1": "MapPartsInfo",
+            "ListSMG2": "MapPartsInfo",
+            "Name": "Gusty Garden -- Small Gravity Scramble Block",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "A small moving block used in the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxPlanetA",
+            "ListSMG1": "ObjInfo",
+            "ListSMG2": "ObjInfo",
+            "Name": "Gusty Garden -- Gravity Scramble Starting Planet",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "The first group of large block planets visited during the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxPlanetB",
+            "ListSMG1": "ObjInfo",
+            "ListSMG2": "ObjInfo",
+            "Name": "Gusty Garden -- Gravity Scramble Block Pair Planet",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "A pair of two large block planets visited during the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxPlanetC",
+            "ListSMG1": "ObjInfo",
+            "ListSMG2": "ObjInfo",
+            "Name": "Gusty Garden -- Gravity Scramble Long Planet",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "The long group of large block planets visited during the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxPlanetD",
+            "ListSMG1": "ObjInfo",
+            "ListSMG2": "ObjInfo",
+            "Name": "Gusty Garden -- Gravity Scramble Cylinder Planet",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "A small cylindrical planet segment visited during the third mission."
+        },
+        {
+            "Progress": 2,
+            "Category": "stagepart",
+            "ClassNameSMG2": "QuestionBoxGalleryObj",
+            "IsLeftover": false,
+            "ClassNameSMG1": "QuestionBoxGalleryObj",
+            "InternalName": "QuestionBoxPlanetE",
+            "ListSMG1": "ObjInfo",
+            "ListSMG2": "ObjInfo",
+            "Name": "Gusty Garden -- Gravity Scramble Cannons Planet",
+            "IsUnused": false,
+            "AreaShape": "Any",
+            "Games": 3,
+            "File": "Map",
+            "Notes": "The last group of large block planets visited during the third mission."
+        }
+    ]
+}

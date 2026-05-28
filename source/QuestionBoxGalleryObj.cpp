@@ -121,12 +121,14 @@ void QuestionBoxGalleryObj::control() {
     MapObjActor::control();
 
     if (mRotator && mRotator->isMoving()) {
+        MR::startLevelSound(this, "SE_OJ_LV_Q_BOX_ROTATE", -1, -1, -1);
         __kAutoMap_803109D0(this,  mObjName); //MR::StageEffect::tryStageEffectMoving(this, mObjName);
         
     }
 
     if (mRailMover) {
 
+        //TODO: see if I can be faithful to G1 code without implementing a hacky solution.
         if (MR::isFirstStep(this)) {
             MapObjActorUtil::startRailMover(this);
             if (mRailMover->isWorking()) {
