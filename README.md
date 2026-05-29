@@ -1,5 +1,5 @@
 >[!WARNING]
-There are some issues with the module that needs to be sorted out before it can be added to SyatiManager.
+This module is in Release Preview stage. There are some issues with the module that needs to be sorted out before it can be added to SyatiManager.
 
 This works with Super Mario Galaxy 2 (SB4E01). Not sure about other regions. Nintendo Switch port is not supported nor planned.
 
